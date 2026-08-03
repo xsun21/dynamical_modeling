@@ -208,9 +208,4 @@ class TDGRISBSolver:
                 socc.append(phi.conj().T @ FH_list[2 * i] @ FH_list[2 * i].H @ phi)
                 docc.append(phi.conj().T @ FH_list[2 * i] @ FH_list[2 * i].H
                              @ FH_list[2 * i + 1] @ FH_list[2 * i + 1].H @ phi)
-            # Quasiparticle weight Z(t) via numerical self-energy derivative
-            # was present but commented out in the source; reintroducing it
-            # requires Compute_Gf_Sig above plus a frequency grid `oms`.
-            # See the commented block in the original script for the
-            # intended finite-difference recipe.
         return socc, docc
